@@ -1,5 +1,3 @@
-N = int(input())
-
-for i in range(N):
-    A, B = map(int, input(),split())
-    print(f'Case #{i+1}: {A+B}')
+import statistics
+value = [100, 90 , 80 ,85, 92]
+print(statistics.pstdev(value))
