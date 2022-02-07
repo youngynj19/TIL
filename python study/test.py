@@ -1,1 +1,0 @@
-print(ord('t')+ord('o')+ord('m'))
