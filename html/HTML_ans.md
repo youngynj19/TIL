@@ -1,5 +1,7 @@
 # HTML
 
+의미 : Hyper Text Markup language
+
 #### 기본 구조
 
 ```html
