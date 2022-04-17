@@ -1,22 +1,34 @@
+'''
+input
+8 9
+1 2 1 3 2 4 2 5 4 6 5 6 6 7 3 7 1 8
+
+output
+1 2 4 6 5 7 3 8
+'''
+from pprint import pprint
+
 def DFS(v):
     stack = []
     visited[v] = 1
     print(v, end=' ')
-    while v != 0:
-        for w in range(1, V+1):
-            if G[v][w] == 1 and not visited[w]:
-                stack.append(v)
+    # print(v, visited)
+    while v != 0:  # True:
+        for w in range(1, V + 1):
+            if G[v][w] == 1 and visited[w] == 0:
+                stack.append(v)  # 방문 경로 저장
                 v = w
+                # print(v, visited)
                 visited[w] = 1
-                print(v, end=' ')
+                print(w, end=' ')
                 break
-        else:
+        else:  # 다음 정점이 없으면
             if stack:
-                v = stack.pop()
+                v = stack.pop()  # 지나온 정점이 남아있는 경우
             else:
-                v = 0
+                v = 0  # 지나온 정점이 남아있지 않은 경우
+                # break
     return
-
 
 
 V, E = map(int, input().split())
