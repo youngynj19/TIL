@@ -167,3 +167,34 @@ for _ in range(M):
             print('NO')
 ```
 
+```
+par = [i for i in range(1000010)] # 부모 노드
+rnk = [0 for i in range(1000010)] # 노드당 레벨
+sz = [1 for i in range(1000010)] # 노드 개수
+
+def find(x):
+    if par[x] == x:
+        return x
+    else:
+        par[x] = find(par[x])
+        return par[x]
+
+def union_(a, b):
+    a = find(a)
+    b = find(b)
+
+    if a == b:
+        return
+
+    if rnk[a] < rnk[b]:
+        par[a] = b
+        sz[b] += sz[a]
+    elif rnk[a] > rnk[b]:
+        par[b] = a
+        sz[a] += sz[b]
+    else:
+        par[a] = b
+        sz[b] += sz[a]
+        rnk[b] += 1
+```
+
