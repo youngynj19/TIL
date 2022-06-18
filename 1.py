@@ -1,8 +1,15 @@
-k = int(input())
+def f(n, i):
+    global N
+    if n == 0:
+        print(1)
+        return
 
-n = 64
-for i in range(k, 0, -1):
-    for _ in range(i):
-        n += 1
-        print(chr(n),end='')
-    print()
+    if i == N:
+        print(n)
+        return
+    else:
+        f(n*i, i+1)
+
+N = int(input())
+
+f(N, 1)
