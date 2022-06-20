@@ -1,15 +1,13 @@
-def f(n, i):
-    global N
-    if n == 0:
-        print(1)
-        return
+def compare(c1, c2):
+    
 
-    if i == N:
-        print(n)
-        return
-    else:
-        f(n*i, i+1)
+lst = []
+for _ in range(5):
+    lst.append(input())
 
-N = int(input())
+for i in range(4):
+    for j in range(4-i):
+        compare(lst[j], lst[j+1])
 
-f(N, 1)
+for c in lst:
+    print(c)
