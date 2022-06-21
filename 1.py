@@ -1,3 +1,6 @@
-lst = list(map(float, input().split()))
-
-print(f'{sum(lst)/6:.1f}')
+lst = ['J', 'U', 'N', 'G', 'O', 'L']
+c = input()
+if c in lst:
+    print(lst.index(c))
+else:
+    print('none')
