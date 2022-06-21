@@ -1,13 +1,8 @@
-n = 0
-lst = []
-
-while True:
-    c = input()
-    if c == '0':
-        break
-    if "mo" in c:
-        lst.append(c)
-    n += 1
-print(n)
+lst = list(input().split())
+count = list(0 for _ in range(30))
 for c in lst:
-    print(c)
+    count[ord(c)-65] += 1
+
+for i in range(30):
+    if count[i] != 0:
+        print(f'{chr(i+65)} : {count[i]}')

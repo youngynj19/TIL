@@ -1,0 +1,7 @@
+school
+pupils
+staff
+end
+and
+p
+nd
