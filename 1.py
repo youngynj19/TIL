@@ -1,23 +1,19 @@
 def compare(i1, i2):
     c1, c2 = lst[i1], lst[i2]
     idx = 0
-    flag = False
     if idx<len(c1) and idx<len(c2):
         if ord(c1[idx]) > ord(c2[idx]):
-            flag = True
+            return
         elif ord(c1[idx]) < ord(c2[idx]):
             lst[i1], lst[i2] = c2, c1
             return
         idx += 1
 
-    if len(c1) >= len(c2):
+    if len(c1) > len(c2):
         return
     else:
-        if flag:
-            return
-        else:
-            lst[i1], lst[i2] = c2, c1
-            return
+        lst[i1], lst[i2] = c2, c1
+        return
 
 
 lst = []
