@@ -1,10 +1,9 @@
-n = int(input())
-lst = list(map(int, input().split()))
+n = 0
+lst = ["flower", "rose", "lily", "daffodil", "azalea"]
+c = input()
 
-for i in range(n-1):
-    for j in range(n-1-i):
-        if lst[j] < lst[j+1]:
-            lst[j], lst[j+1] = lst[j+1], lst[j]
-
-for i in range(n):
-    print(lst[i])
+for ch in lst:
+    if ch[1] == c or ch[2] == c:
+        print(ch)
+        n += 1
+print(n)
