@@ -1,9 +1,13 @@
 n = 0
-lst = ["flower", "rose", "lily", "daffodil", "azalea"]
-c = input()
+lst = []
 
-for ch in lst:
-    if ch[1] == c or ch[2] == c:
-        print(ch)
-        n += 1
+while True:
+    c = input()
+    if c == '0':
+        break
+    if "mo" in c:
+        lst.append(c)
+    n += 1
 print(n)
+for c in lst:
+    print(c)
