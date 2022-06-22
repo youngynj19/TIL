@@ -1,6 +1,13 @@
-lst = []
-for i in range(3):
-    lst.append(list(map(int, input().split())))
-    lst[i] = set(lst[i])
-print(f'Intersection: {lst[0]&lst[1]&lst[2]}')
-print(f'Union: {lst[0]|lst[1]|lst[2]}')
+lst = list(input().split())
+n = int(input())
+dic = dict()
+for name in lst:
+    if name in dic:
+        dic[name] += 1
+    else:
+        dic.update({name: 1})
+for name in lst:
+    a = dic.get(name)
+    if a == n:
+        print(name)
+        dic.pop(name)
