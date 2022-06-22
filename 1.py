@@ -1,21 +1,11 @@
-def compare(i1, i2):
-    c1, c2 = lst[i1], lst[i2]
-    i = 0
-    while i<len(c1) and i<len(c2):
-        if ord(c1[i]) < ord(c2[i]):
-            return
-        elif ord(c2[i]) < ord(c1[i]):
-            lst[i1], lst[i2] = c2, c1
-        i += 1
-    if len(c1) > len(c2):
-        lst[i1], lst[i2] = c2, c1
+set1 = set(map(int, input().split()))
+set2 = set(map(int, input().split()))
+lst = set1 - set2
+lst = list(lst)
 
-lst = list(input().split())
-s = set(lst)
-lst = list(s)
 l = len(lst)
 for i in range(l-1, 0, -1):
     for j in range(i):
-        compare(j, j+1)
+        if lst[j] > lst[j+1]:
+            lst[j], lst[j+1] = lst[j+1], lst[j]
 print(*lst)
-print(l)
