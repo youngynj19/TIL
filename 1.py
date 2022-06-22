@@ -1,5 +1,3 @@
 n = int(input())
-lst = []
-for i in range(1, n+1):
-    lst.append(f'No.{i}')
+lst = [f'No{i}' for i in range(1,n+1)]
 print(lst)
