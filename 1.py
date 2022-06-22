@@ -1,5 +1,8 @@
-lst = [[5,8,10,6,4],[11,20,1,13,2],[7,9,14,22,3]]
-for ls in lst:
-    for n in ls:
-        print(f'{n:>2}',end='   ')
+print('first array')
+lst1 = [list(map(int, input().split())) for i in range(2)]
+print('second array')
+lst2 = [list(map(int, input().split())) for i in range(2)]
+for i in range(2):
+    for j in range(4):
+        print(lst1[i][j]*lst2[i][j],end=' ')
     print()
