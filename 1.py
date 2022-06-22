@@ -1,8 +1,7 @@
-print('first array')
-lst1 = [list(map(int, input().split())) for i in range(2)]
-print('second array')
-lst2 = [list(map(int, input().split())) for i in range(2)]
-for i in range(2):
-    for j in range(4):
-        print(lst1[i][j]*lst2[i][j],end=' ')
+lst = [[1 for _ in range(5)] for i in range(5)]
+for i in range(5):
+    for j in range(5):
+        if i*j:
+            lst[i][j] = lst[i][j-1] + lst[i-1][j]
+        print(lst[i][j], end=' ')
     print()
