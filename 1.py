@@ -1,11 +1,19 @@
-set1 = set(map(int, input().split()))
-set2 = set(map(int, input().split()))
-lst = set1 - set2
-lst = list(lst)
+lst = list(input().split())
 
-l = len(lst)
-for i in range(l-1, 0, -1):
-    for j in range(i):
-        if lst[j] > lst[j+1]:
-            lst[j], lst[j+1] = lst[j+1], lst[j]
-print(*lst)
+dic = dict()
+for name in lst:
+    if name in dic:
+        dic[name] += 1
+    else:
+        dic.update({name: 1})
+
+n = 0
+for i in range(dic[lst[0]]+1):
+    if i in dic.values():
+        n = i
+        break
+
+for key, val in dic.items():
+    if val == n:
+        print(key)
+print(n)
