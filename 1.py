@@ -1,19 +1,10 @@
-lst = list(input().split())
+def f(n):
+    idx = 0
+    for i in range(n):
+        for j in range(n):
+            idx += 1
+            print(idx, end=' ')
+        print()
 
-dic = dict()
-for name in lst:
-    if name in dic:
-        dic[name] += 1
-    else:
-        dic.update({name: 1})
-
-n = 0
-for i in range(dic[lst[0]]+1):
-    if i in dic.values():
-        n = i
-        break
-
-for key, val in dic.items():
-    if val == n:
-        print(key)
-print(n)
+n = int(input())
+f(n)
