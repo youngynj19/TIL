@@ -1,10 +1,9 @@
-def f(n):
-    idx = 0
-    for i in range(n):
-        for j in range(n):
-            idx += 1
-            print(idx, end=' ')
-        print()
+def f(n, m):
+    ans = 1
+    for _ in range(m):
+        ans *= n
+    return ans
 
-n = int(input())
-f(n)
+n, m = map(int, input().split())
+
+print(f(n, m))
