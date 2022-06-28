@@ -1,10 +1,16 @@
-def f(n, lst):
-    for i in range(n-1, 0, -1):
-        for j in range(i):
-            if lst[j] < lst[j+1]:
-                lst[j], lst[j+1] = lst[j+1], lst[j]
-    print(*lst)
+def f1(a1, a2):
+    if abs(a1) > abs(a2):
+        return a1
+    else:
+        return a2
 
-n = int(input())
-lst = list(map(int, input().split()))
-f(n, lst)
+def f2(a, b):
+    if abs(a) < abs(b):
+        return a
+    else:
+        return b
+
+a, b = map(int, input().split())
+print(f1(a, b))
+c,d = map(float, input().split())
+print(f2(c, d))
