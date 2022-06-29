@@ -1,9 +1,6 @@
 def f(n):
-    global N
-    if n == N:
-        return
-    print("recursive")
-    f(n+1)
+    if n == 0:
+        return 0
+    return n+f(n-1)
 
-N = int(input())
-f(0)
+print(f(int(input())))
