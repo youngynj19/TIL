@@ -1,9 +1,9 @@
-def f(a,b):
-    a,b = a**(1/2), b**(1/2)
-    mn,mx = min(a,b), max(a,b)
-    a,b = int(mn*10//10+1), int(mx*10//10)
+def f(lst):
+    for i in range(6, 3, -1):
+        for j in range(i):
+            a,b = lst[j],lst[j+1]
+            if a>b:
+                lst[j],lst[j+1]=b,a
+    print(*lst)
 
-    print(b-a+1)
-
-a,b = map(float, input().split())
-f(a,b)
+f(list(map(int, input().split())))
