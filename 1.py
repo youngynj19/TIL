@@ -1,11 +1,9 @@
-def f(n, lst):
-    for i in range(n-1,0,-1):
-        for j in range(i):
-            a,b = lst[j],lst[j+1]
-            if a < b:
-                lst[j], lst[j+1] = b,a
+def f(a,b):
+    a,b = a**(1/2), b**(1/2)
+    mn,mx = min(a,b), max(a,b)
+    a,b = int(mn*10//10+1), int(mx*10//10)
 
-N = int(input())
-lst = list(map(int, input().split()))
+    print(b-a+1)
 
-f(N, lst)
+a,b = map(float, input().split())
+f(a,b)
