@@ -1,9 +1,11 @@
-def bubble(lst):
-    l = len(lst)
-    for i in range(l-1,0,-1):
+def f(n, lst):
+    for i in range(n-1,0,-1):
         for j in range(i):
-            if lst[j] < lst[j+1]:
-                lst[j],lst[j+1] = lst[j+1],lst[j]
-        print(*lst)
+            a,b = lst[j],lst[j+1]
+            if a < b:
+                lst[j], lst[j+1] = b,a
 
-bubble(list(map(int, input().split())))
+N = int(input())
+lst = list(map(int, input().split()))
+
+f(N, lst)
