@@ -1,12 +1,7 @@
-def roll(lev, num):
-    global L
-    if lev == L:
-        print(*dice)
-        return
-    for n in range(num,7):
-        dice[lev] = n
-        roll(lev+1, n)
+def f(n):
+    if n == 1:
+        return 1
+    
+    return f(n//2) + f(n-1)
 
-L = int(input())
-dice = [0] * L
-roll(0, 1)
+print(f(int(input())))

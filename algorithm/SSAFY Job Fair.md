@@ -52,3 +52,17 @@ Python, C, Java 중 1개 이상 가능?
 
 ### 오토닉스 - AI 스마트 비젼 시스템 개발
 
+
+
+
+
+
+
+
+
+
+
+
+
+recruit@midasit.com
+
