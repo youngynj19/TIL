@@ -1,11 +1,8 @@
-lst = []
 def f(n):
-    if n == 1:
-        lst.append(n)
+    if n == 0:
         return
     
-    lst.append(n)
     f(n//2)
+    print(n, end=' ')
 
 f(int(input()))
-print(*lst[::-1])
