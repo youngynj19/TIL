@@ -1,14 +1,10 @@
-N = int(input())
+a,b,c = map(int, input().split())
 
 def f(n):
-    if n == 1:
-        return 0
-    
-    ans = 0
-    if n%2:
-        ans = f(n//3)
-    else:
-        ans = f(n//2)
-    return ans+1
+    if n == 0:
+        return 1
 
-print(f(N))
+    ans = n%10 if n%10 else 1
+    return f(n//10) * ans
+
+print(f(a*b*c))
