@@ -1,16 +1,13 @@
 N = int(input())
-path = [0]*101
 
-def f(n):
-    if path[n] > 0:
-        return path[n]
-    
+def f(n, cnt):
     if n == 1:
-        path[1] = 1
-    elif n == 2:
-        path[2] = 2
+        print(cnt)
+        return
+    
+    if n%2:
+        f(n//3, cnt+1)
     else:
-        path[n] = f(n-2)*f(n-1)%100
-    return path[n]
+        f(n//2, cnt+1)
 
-print(f(N))
+f(N, 0)
