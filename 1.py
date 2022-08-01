@@ -1,13 +1,14 @@
 N = int(input())
 
-def f(n, cnt):
+def f(n):
     if n == 1:
-        print(cnt)
-        return
+        return 0
     
+    ans = 0
     if n%2:
-        f(n//3, cnt+1)
+        ans = f(n//3)
     else:
-        f(n//2, cnt+1)
+        ans = f(n//2)
+    return ans+1
 
-f(N, 0)
+print(f(N))
