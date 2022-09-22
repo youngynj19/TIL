@@ -1,10 +1,7 @@
-a,b,c = map(int, input().split())
+class Complex:
+    def __init__(self, realpart, imagpart):
+        self.r = realpart
+        self.i = imagpart
 
-def f(n):
-    if n == 0:
-        return 1
-
-    ans = n%10 if n%10 else 1
-    return f(n//10) * ans
-
-print(f(a*b*c))
+x = Complex(3.0, -4.5)
+print(f'({x.r}, {x.i})')
